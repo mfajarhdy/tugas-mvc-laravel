@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::get('/', function(){
-    return view('home');
- });
- Route::get('/data_table', function(){
-     return view('data_table');
- });
-
- Route::get('/master', function(){
-    return view('main/master');
- });
+ Route::get('/', 'HomeController@home');
+ Route::get('/register', 'AuthController@register');
+ Route::get('/welcome', 'AuthController@welcome');
+ Route::post('/welcome', 'AuthController@welcome_post');
